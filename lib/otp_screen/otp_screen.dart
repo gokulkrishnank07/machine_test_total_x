@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:total_x_mechine_test/user_list_screen/user_list_screen.dart';
 
 class OtpScreen extends StatefulWidget {
   const OtpScreen({super.key});
@@ -140,7 +141,12 @@ class _OtpScreenState extends State<OtpScreen> {
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-              
+               Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => UserListScreen(),
+                ),
+              );
                   },
                   style: ElevatedButton.styleFrom(
                   
