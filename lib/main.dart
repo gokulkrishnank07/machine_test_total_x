@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:total_x_mechine_test/first_page/login_screen.dart';
+import 'package:total_x_mechine_test/otp_screen/otp_screen.dart';
 
 void main() {
   runApp(const MyApp());

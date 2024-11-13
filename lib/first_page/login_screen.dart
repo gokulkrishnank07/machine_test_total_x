@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:total_x_mechine_test/otp_screen/otp_screen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -13,14 +14,11 @@ class LoginScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-            
               Image.asset(
-                "images/OBJECTS.jpg", 
+                "images/OBJECTS.jpg",
                 height: 150,
               ),
               SizedBox(height: 20),
-
-          
               Text(
                 'Enter Phone Number',
                 style: TextStyle(
@@ -40,27 +38,34 @@ class LoginScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 10),
-
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text("By Continuing, I agree to "),
                   GestureDetector(
                     onTap: () {
-                 
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const OtpScreen()));
                     },
-                    child: Text(
-                      "TotalX's Terms and condition",
-                      style: TextStyle(
-                        color: Colors.blue,
-                        decoration: TextDecoration.underline,
+                    child: SizedBox(
+                      height: 100,
+                      child: Text(
+                        "",
+                        style: TextStyle(
+                          color: Colors.blue,
+                          decoration: TextDecoration.underline,
+                        ),
                       ),
                     ),
                   ),
                   Text(" & "),
                   GestureDetector(
                     onTap: () {
-                    
+                      MaterialPageRoute(
+                        builder: (context) => OtpScreen(),
+                      );
                     },
                     child: Text(
                       "privacy policy",
@@ -73,16 +78,18 @@ class LoginScreen extends StatelessWidget {
                 ],
               ),
               SizedBox(height: 20),
-
-             
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
                   onPressed: () {
-                   
+                    Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => OtpScreen(),
+                ),
+              );
                   },
                   style: ElevatedButton.styleFrom(
-                   
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0),
                     ),
